@@ -55,10 +55,19 @@ a{
     overflow: hidden;
 }
 
+.content_wrap { /* 카드중간정렬 */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content_wrap ul li { /* 카드 중간정렬 */
+    justify-content: center;
+}
+
 .business_list {
     width: 100%;
     cursor: pointer;
-}
+} 
 
 .title, .subTitleEng {
     font-family: 'Noto Sans KR', sans-serif;
@@ -86,7 +95,7 @@ a{
     height: 185px;
 }
 
-.img_wrap img {
+.img_wrap img { /* 이미지정렬 */
     position: absolute;
     width: 100px;
     top: 50%;
@@ -94,8 +103,9 @@ a{
     transform: translate(50%, -50%)
 }
 
-.img_wrap:first-child img {
+#firstIconSize {
     width: 140px;
+    height: 65.45px;
 }
 
 .flip_box {
@@ -179,4 +189,8 @@ a{
 
 .center_wrap li {
     width: 100%;
+}
+
+@media (max-width 940px) {
+    
 }
