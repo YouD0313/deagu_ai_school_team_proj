@@ -55,21 +55,22 @@ a{
     overflow: hidden;
 }
 
-.content_wrap { /* 카드중간정렬 */
+.content_wrap {
     max-width: 1400px;
+    display: flex;
+}
+
+.content_wrap, .content_wrap ul{ /* 카드 중간정렬 */
     margin: 0 auto;
 }
-
-.content_wrap ul {
-    margin-left: 20px; /* 특정사이즈 이하로 내려가면 왼쪽으로 붙어서 마진을 줬음 */
-}
-
-.content_wrap ul li { /* 카드 중간정렬 */
-    justify-content: center;
+.content_wrap ul { /* 카드 중간정렬 */
+    text-align: center;
 }
 
 .business_list {
     cursor: pointer;
+    width: 100%;
+    padding: 0;
 } 
 
 .center_wrap li {
@@ -118,10 +119,11 @@ a{
 .flip_box {
     display: inline;
     perspective: 1000rem;
+    /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
+       3D transform과 같이 자주 사용 */
 }
 
-.flip {
-    min-width: 207.02px;
+.flip { /* 카드 */
     display: inline-block;
     box-sizing: border-box;
     background-color: #f6f6f6;
@@ -135,7 +137,7 @@ a{
     transition: 1s;
 }
 
-.front a {
+.front a { /* 카드 내 중간정렬 */
     text-align: center;
     height: 100%;
     width: 100%;
@@ -152,8 +154,8 @@ a{
     visibility: visible;
 }
 
-.front, .back {
-    backface-visibility: hidden; /* 뒷 카드 안보이게 */
+.front, .back { /* 뒷 카드 안보이게 */
+    backface-visibility: hidden;
 }
 
 .front{
@@ -161,12 +163,12 @@ a{
     transform: rotateY(0deg);
 }
 
-.back{
+.back{ /* 뒷면은 사전에 미리 뒤집기 */
     transform: rotateY(180deg);
 }
 
-.flip_box:hover .flip{
-    transform: rotateY(-180deg); /*y축을 기준으로 180도까지회전*/
+.flip_box:hover .flip{ /* 호버 시 뒤집기 */
+    transform: rotateY(180deg); /*y축을 기준으로 180도까지회전*/
     background-color: #000;
 }
 
@@ -192,4 +194,45 @@ a{
     font-weight: 400;
     line-height: 1.8;
     white-space: nowrap;
+}
+
+@media (max-width:430px) {
+    .flip {
+        justify-content: center;
+        width: 374.41px;
+        height: 250px;
+    }
+}
+
+@media (max-width:640px) {
+    .b_wrap{padding: 30px 10px;}
+    .front a {margin-top: 13%;}
+    .title {font-size: 20px;}
+    .subTitleEng {font-size: 13px;}
+    .flip {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        width: 276px; height: 250px;
+    }
+    .img_wrap img {
+        width: 80px;
+        height: 80px;
+    }
+    #firstIconSize {
+        width: 140px;
+        height: 65.44px;
+    }
+    .content_wrap ul {
+        text-align: center;
+    }
+}
+
+@media (max-width:940px) {
+    .flip {
+        justify-content: center;
+        width: 432.39px;
+        height: 300px;
+        margin-bottom: 10px;
+    }
 }
