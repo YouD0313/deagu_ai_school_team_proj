@@ -1,27 +1,3 @@
-.no-wrap {
-    flex-wrap: no-wrap;
-  }
-  .wrap {
-    
-    flex-wrap: wrap;
-  }
-  
-  
-  /* Demo decoration */
-
-  .flex {
-    animation: resize 6s infinite;
-  }
-  
-  @keyframes resize {
-    0%, 100% {
-      width: 100%;
-    }
-    50% {
-      width: 50%;
-    }
-  }
-
 a{
     text-decoration: none;
     color: #000;
@@ -68,6 +44,11 @@ a{
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+.loading {
+    width: 0;
+    height: 0;
+}
 
 /* card flip 효과 */
 .b_wrap {
@@ -135,12 +116,11 @@ a{
 .flip { /* 카드 */
     display: inline-block;
     box-sizing: border-box;
-    background-color: #f6f6f6;
     width: calc(100% / 4 - 3%);
     height: 350px;
     position: relative;
     margin: 0 1%;
-    max-width: 308px;
+    max-width: 43%;
 }
 
 .flip_li {
@@ -148,9 +128,8 @@ a{
     background-color: #f6f6f6;
     width: calc(100% / 4 - 3%);
     height: 350px;
-    /* position: relative; */
+    position: relative;
     margin: 0 1%;
-    max-width: 308px;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
     transition: .8s;
@@ -200,7 +179,6 @@ a{
 .layoutImg img {
     position: relative;
     background-size: cover;
-    /* transform: translate(%, 100%); */
 }
 
 .darken { /* 뒷 카드 이미지 밝기 */
@@ -225,19 +203,19 @@ a{
 
 
 @media (max-width:940px) {
-    .b_wrap {max-width: 940px; padding: 100px 0;}
+    .b_wrap {max-width: 940px; padding: 40px 0;}
     .business_list {flex-wrap: wrap;}
     .flip {
+        background-color: #f6f6f6;
         width: calc(100% / 2 - 4%);
         height: 300px;
         /* margin-bottom: 30px; */
         margin: 2%;
     }
-    .flip_li{height: auto;}
+    .flip_li{height: auto; width: 30%;}
     .front a{
         margin-top: 15%;
     }
-
     .darken {
         height: 300px;
         width: 100%;
@@ -250,10 +228,11 @@ a{
 }
 
 @media (max-width:640px) {
-    .b_wrap {padding: 100px 0;}
+    .b_wrap {padding: 40px 0;}
     .title {font-size: 20px;}
     .subTitleEng {font-size: 13px;}
     .flip {
+        background-color: #f6f6f6;
         margin-bottom: 15px;
         padding: 0;
         width: calc(100% / 2 - 3%); height: 250px;
@@ -273,11 +252,15 @@ a{
     .front a{
         margin-top: 10%;
     }
+    #lastIconSize {height: 48px;}
 }
 
 @media (max-width:430px) {
+    .b_wrap {padding: 40px 0;}
     .flip {
-        width: 374.41px;
+        background-color: #f6f6f6;
+        max-width: 354.41px;
+        width: 100%;        
         height: 250px;
     }
     .front a{
