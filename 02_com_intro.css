@@ -1,0 +1,288 @@
+.container {
+    width: 100%;
+    box-sizing: border-box;
+}
+.back_gray {
+    background-color: #F9F9F9;
+}
+.intro, .his_timeline, .organi, .certifi, .map {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 80px;  
+}
+.intro_wrap, .his_wrap, .organi_wrap, .certifi_wrap, .map_wrap {
+
+    /* di 220720 중간정렬 */
+    width: 1280px;
+    margin: 0 auto;
+}
+/* .intro_border, .timeline_container, .organi_container, .certifi_container {
+    margin-top: 50px;
+} */
+.font_head {
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    font-weight: var(--unnamed-font-weight-bold);
+}
+.font_data {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #959595;
+}
+
+/* di intro 
+––––––––––––––––––––––––––––––––––––––––––––––––––----- */
+.intro_border {
+    width: 1280px;
+    height: 522px;
+}
+.intro_head, .intro_data{
+    text-align: left;
+    padding: 1rem;
+    padding-left: 2rem;
+    line-height: 2;
+}
+.intro_border, .intro_head, .intro_data {
+    border-top: 1px solid #dbdbdb;
+    border-collapse: collapse;
+}
+.intro_last:last-child {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/* di history timeline
+––––––––––––––––––––––––––––––––––––––––––––––––––----- */
+ .his_timeline {
+    height: 1250px;
+ }
+.timeline_container {
+    width: 1160px;
+    height: 800px;
+    margin-left: 190px;
+    position: relative;
+}
+.timeline_container::after {
+    position: absolute;
+    top: 40px;
+    content: ' ';
+    width: 2px;
+    height: 870px;
+    border-right: 6px solid var(--lightgray-color-C8C8C8);
+}
+.timeline_container ul {
+    list-style: none;
+}
+.timeline_container .month, .timeline_container .circle {
+    margin: 25px 0px;
+}
+.his_container .month {
+    color: var(--unnamed-color-184B9F);
+    font-weight: var(--unnamed-font-weight-bold);
+    font-size: 32px;
+    float: right;
+}
+.his_container .circle {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--unnamed-color-184B9F);
+    border-radius: 50%;
+    left: 415.5px;
+    margin-top: 40px;
+    z-index: 10;
+}
+.year22, .year21 {
+    font-size: 50px;
+    position: absolute;
+    left: 100px;
+    font-weight: var(--unnamed-font-weight-bold);    
+}
+.year22 {
+    top: 20px;
+}
+.year21 {
+    top: 210px;
+}
+.his_line {
+    width: calc(100% - 170px);
+    border-bottom: 1px solid #dbdbdb;
+    position: absolute;
+    top: 140px;
+    margin-left: 8.5%;
+}
+.time_ex {
+    width: 680px;
+    margin-top: -35px;
+}
+.his_ex {
+    font-size: 18px;
+    line-height: 3rem;
+    text-align: left;
+}
+.his_month {
+    width: 20px;
+    padding-left: 380px;
+    padding-right: 40px;
+}
+.his_container:nth-child(odd) {
+    float: left;
+    clear: right;
+}
+.his_container:nth-child(even) {
+    float: right;
+    clear: left;
+}
+
+/* di organization chart
+––––––––––––––––––––––––––––––––––––––––––––––––––----- */
+.organi_container {
+    max-width: 1400px;
+    position: relative;
+    right: 20px;
+}
+.organi_container ol{
+    list-style: none;
+}
+.organi_container p {
+    text-align: center;
+    font-size: 26px;
+    padding: 25px 0;
+}
+.organi_box {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    border: 3px solid var(--unnamed-color-184B9F);
+    border-radius: 20px;
+    z-index: 10;
+}
+li .organi_box {
+    width: 200px;
+}
+
+/* 
+ *LEVEL-1 STYLES 
+ */
+.level-1-wrap {
+    width: 1400px;
+    place-content: center;
+}
+.level-1 {
+    margin: 0 auto 120px;
+    background-color: var(--unnamed-color-184B9F);
+    color: white;
+}
+.level-1::before {
+    content: "";
+    position: absolute;
+    margin-top: 3px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: #707070;
+}
+
+/* 
+ *LEVEL-2 STYLES 
+ */
+.level-2-wrapper {
+    width: 1400px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.level-2-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: #707070;
+}
+/* .level-2-wrapper::after {
+    display: none;
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    width: calc(100% + 20px);
+    height: 2px;
+    background: #dbdbdb;
+} */
+.level-2-wrapper li {
+    position: relative;
+}
+.level-2-wrapper > li::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: #707070;
+}
+.level-2 {
+    width: 70%;
+    margin: 0 auto 40px;
+}
+/* .level-2::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-100%, -50%);
+    width: 20px;
+    height: 2px;
+    background: var(--black);
+} */
+
+/* 
+ *LEVEL-3 STYLES 
+ */
+.level-3-wrapper li {
+    text-align: left;
+    padding-left: 20%;
+    font-size: 22px;
+    line-height: 40px;
+}
+.level-3-wrapper li::before {
+    position: absolute;
+    top: 18px;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+}
+.level-3 {
+    margin-bottom: 20px;
+}
+
+/* di certification & patent
+––––––––––––––––––––––––––––––––––––––––––––––––––----- */
+.certifi_container {
+    position: relative;
+    width: 990px;
+    height: 1120px;
+    margin-left: 363px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.certifi_overlap{
+    position: absolute;
+    top: 3223px;
+    right: -2px;
+    z-index: 10;
+}
+.certifi_overlap img {
+    width: 220px;
+    height: 310px;
+    object-fit: none;
+}
