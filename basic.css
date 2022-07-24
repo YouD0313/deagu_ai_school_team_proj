@@ -10,12 +10,16 @@
     box-sizing: border-box; font-family:'Noto Sans KR', sans-serif;
 }
 a {
-    text-decoration: none;
+    text-decoration: none; 
+    color: var(--black-color-1E1E1E);
 }    
 /* 영역 margin  - 개인 영역간에 st-wrap class명 추가해 주세요 */
+.container{
+    overflow: hidden;
+}
 .st-wrap{
-    width: 100%; margin: 0 auto;
-    margin: 100px 300px;
+    margin: 0 auto; margin-top: 100px;
+    max-width:1440px;
 }
 
 /* Character Styles */
