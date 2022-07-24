@@ -87,7 +87,7 @@
     height: 20px;
     background-color: var(--unnamed-color-184B9F);
     border-radius: 50%;
-    left: 415.5px;
+    left: 415px;
     margin-top: 40px;
     z-index: 10;
 }
@@ -315,7 +315,6 @@ li .organi_box {
 .bold_border {
     border-bottom: 1px solid #1e1e1e;
 }
-
 
 /* jungin footer
 ––––––––––––––––––––––––––––––––––––––––––––––––––----- */
