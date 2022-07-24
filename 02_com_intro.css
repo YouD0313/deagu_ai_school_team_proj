@@ -309,6 +309,12 @@ li .organi_box {
 
 /* di map
 ––––––––––––––––––––––––––––––––––––––––––––––––––----- */
+.map {
+    margin-bottom: 100px;
+}
+.bold_border {
+    border-bottom: 1px solid #1e1e1e;
+}
 
 
 /* jungin footer
