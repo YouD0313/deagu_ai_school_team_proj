@@ -61,7 +61,7 @@ d이것먼저 답변달아보셔요~
 // }
 /**
  * explain: 더보기 버튼
- * @returns 상태값 변경
+ * @'returns 상태값 변경
  */
 // function more(){
 //     var outerHeight = window.outerHeight;
@@ -96,7 +96,7 @@ if(matchMedia("screen and (max-width: 768px)").matches) {
 let grid_diplay_chk = $('.certifi_container>.certifi_grid').is(':visible');
 console.log('grid_diplay_chk : ',grid_diplay_chk)
 if(!!grid_diplay_chk) {
-    console.log('111111111111')
+    // console.log('111111111111')
     $(".certifi_img_wrap").css({"height":"auto"})
     $(".certifi_container").css({"height":"auto"})
     $(".certifi_container>.certifi_grid").css({"height":"330px"})
