@@ -4,20 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="00_header.css">
+    <link rel="stylesheet" href="00_header2.css">
     <link rel="stylesheet" href="02_com_intro.css">
     <link rel="stylesheet" href="06_footer.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="basic.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!--jquery library -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>        
+    <!--지도  js -->    
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5738d59a1234aafad1f9ad8f0979df6"></script>
+    <!--기능  js -->
+    <script src="02_certifi_more.js"></script>
+    <!--header js -->
+    <script src="00_header2.js"></script>
     <title>page2</title>
 </head>
 <body>
+    <header id="header">
+        <a class="logo fix" href="index.html"><img src="00.logo.svg" alt="로고"></a>
+        <div id="nav_gnb">
+            <nav>
+                <ul id="main_nav">
+                    <li><a href="sub02.html">회사소개</a>
+                        <ul class="nav_menu close">
+                            <li><a href="#intro">REsoft소개</a></li>
+                            <li><a href="#his_timeline">연혁</a></li>
+                            <li><a href="#organi">조직도</a></li>
+                            <li><a href="#certifi">특허&인증</a></li>
+                            <li><a href="#kakaomap">오시는 길</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="sub03.html">사업현황</a>
+                        <ul class="nav_menu close">
+                            <li><a href="sub03.html#ecoce">ECOCE</a></li>
+                            <li><a href="sub03.html#moado">moaDo</a></li>
+                            <li><a href="sub03.html#etc">Etc</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub04.html">정보마당</a>
+                    <ul class="nav_menu close">
+                        <li><a href="sub04.html">REsoft소식</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>  
+        <div class="nav_menu close"></div>
+        </div>
+        <a class="menubar fix"><img src="04.menu.svg" alt="" ></a>
+        <div class="infonav_text">
+            <img src="02_intromenu.png" alt="">
+            <div class="text_p">
+                <p>회사소개</p>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
     <div class="container">
 
         <!-- di intro -->
-        <section class="intro">
+        <section id="intro" class="intro">
 
             <!-- di 중간정렬위해 div태그 -->
             <div class="intro_wrap">
@@ -57,7 +106,7 @@
         </section>
 
         <!-- Di history timeline -->
-        <section class="his_timeline back_gray">
+        <section id="his_timeline" class="his_timeline back_gray">
 
             <!-- di 중간정렬위해 div태그 -->
             <div class="his_wrap">
@@ -141,7 +190,7 @@
         </section>
 
         <!-- Di organization chart -->
-        <section class="organi">            
+        <section id="organi" class="organi">            
             <div class="organi_wrap">
                 <h2 class="main_title">조직도</h2>
                 <p class="sub_title">organization</p>
@@ -210,7 +259,7 @@
         </section>
 
         <!-- Di certification & patent -->
-        <section class="certifi back_gray">
+        <section id="certifi" class="certifi back_gray">
             <div class="certifi_wrap">
                 <h2 class="main_title">특허 & 인증</h2>
                 <p class="sub_title">certification & patent</p>
@@ -243,7 +292,7 @@
                     
                     </div>
                         <div class="btn">
-                            <button class="button" onclick="more()"><p>더보기</p></button>
+                            <input id="more_btn" class="button" type="button" value="더보기" onclick="changeText();">                            
                         </div>
                     </div>
 
@@ -253,7 +302,7 @@
         </section>
 
         <!-- Di directions -->
-        <section class="map">
+        <section id="kakaomap" class="map">
             <div class="map_wrap">
                 <h2 class="main_title">오시는 길</h2>
                 <p class="sub_title">derections</p>
@@ -263,11 +312,11 @@
                     <div id="map"></div>
                     <table class="map_border">
                         <tr>
-                            <th class="intro_head mapFont_head">연락처</th>
+                            <th class="intro_head font_head mapFont_head">연락처</th>
                             <td class="intro_data font_data">TEL.(053) 475-2110 / FAX.(0504) 257-5966 / E-mail. call@resoft.kr</td>
                         </tr>
                         <tr>
-                            <th class="intro_head border_head bold_border mapFont_head">주소</th>
+                            <th class="intro_head border_head bold_border font_head mapFont_head">주소</th>
                             <td class="intro_data border_data bold_border font_data">(41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (주)리소프트</td>
                         </tr>                    
                     </table>
@@ -301,10 +350,7 @@
                 </div>
                 </div>
             </div>
-    </footer>
-    
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b5738d59a1234aafad1f9ad8f0979df6"></script>
-    <script src="02_kakao_api.js"></script>    
-    <script src="02_certifi_more02.js"></script>
+    </footer>        
+    <script src="02_kakao_api.js"></script>
 </body>
 </html>

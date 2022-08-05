@@ -5,6 +5,9 @@
 .back_gray {
     background-color: #F9F9F9;
 }
+.intro{
+    margin-top: 300px;
+}
 .intro, .his_timeline, .organi, .certifi, .map {
     width: 100%;
     padding-top: 100px;
@@ -66,7 +69,7 @@
     top: 40px;
     content: ' ';
     width: 2px;
-    height: 930px;
+    height: 950px;
     border-right: 6px solid var(--lightgray-color-C8C8C8);
 }
 .timeline_container ul {
@@ -380,7 +383,7 @@ li .organi_box {
         margin-left: -100px;
     }
     .timeline_container::after {
-        height: 1050px;
+        height: 980px;
         border-right: 3px solid var(--lightgray-color-C8C8C8);
     }
     .his_line {
@@ -622,7 +625,7 @@ li .organi_box {
         width: 120px;
     }
     
-    .button p {
+    .button[value="더보기"], .button[value="접기"] {
         font: var(--unnamed-font-style-normal) normal medium 20px/29px var(--unnamed-font-family-noto-sans-kr);
         text-align: center;
         font: normal normal medium 20px/29px Noto Sans KR;
@@ -634,8 +637,6 @@ li .organi_box {
     }
     .button:hover {
         background: var(--blue-color-184B9F);
-    }
-    .button:hover p {
         color: white;
     }
     
